@@ -1,0 +1,10 @@
+{
+    "name1": "me",
+    "name2": "notme",
+    "onlyInOne": true,
+    "array": [
+        "item6",
+        "item7",
+        "item8"
+    ]
+}

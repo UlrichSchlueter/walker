@@ -1,0 +1,20 @@
+---
+# remember to escape \ with a \ so Yaml !
+ignorerules:
+- name: "Remove Status"
+  ifpathmatches: ".*\\.status\\."
+- name: "Remove Status"
+  ifpathmatches: ".*\\.managedFields\\."
+- name: "Remove Last applied configuration"
+  ifpathmatches: ".*kubectl\\.kubernetes.io/last-applied-configuration"  
+- name: "Remove Creationtime"
+  ifpathmatches: ".*metadata\\.creationTimestamp"  
+- name: "Remove resourceVersion"
+  ifpathmatches: ".*metadata\\.resourceVersion"  
+- name: "Remove ownerReferences"
+  ifpathmatches: ".*metadata\\.ownerReferences\\.\\d+\\.uid"  
+
+replacerules:
+- name: re
+  ifpathmatches: "\\.namespaces\\.kube-node-lease\\.metadata\\.uid"
+  replacevaluewith: XXXXX

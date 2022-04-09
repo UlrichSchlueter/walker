@@ -1,0 +1,8 @@
+ignorerules:
+- name: "Remove Name One"
+  ifpathmatches: ".*name1"
+replacerules:
+- name: re
+  ifpathmatches: ".*onlyInOne"
+  replacepathwith: "sdfd"
+  
